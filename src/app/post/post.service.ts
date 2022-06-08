@@ -57,7 +57,6 @@ export class PostService {
   find(id: string): Observable<any> {
     
     return this.httpClient.get(this.baseURL + '/post/' + id)
-
       .pipe(
         catchError(this.errorHandler)
       )
@@ -102,6 +101,7 @@ export class PostService {
     } else {
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
+
     return throwError(() => new Error(errorMessage));
   };
 };
