@@ -3,9 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
 
 import { PostModule } from './post/post.module';
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import {AppHttpInterceptor} from './post/interceptor/intercept.error'
 
 @NgModule({
   declarations: [
@@ -17,7 +20,12 @@ import { PostModule } from './post/post.module';
     PostModule,
     HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers:    [{
+    provide: HTTP_INTERCEPTORS,
+    useClass:
+    AppHttpInterceptor,
+    multi: true
+ }]
 })
 export class AppModule { };
