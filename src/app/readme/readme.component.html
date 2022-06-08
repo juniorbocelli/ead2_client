@@ -1,0 +1,79 @@
+<div class="container py-3">
+  <h1>Sistema de Posts</h1>
+
+  <p>O sistema simula um simples cadastro de posts com as opções de listagem, cadastro, visualização, edição e remoção.</p>
+
+  <a href="/post" class="btn btn-success btn-sm">Ir para o sistema</a>
+
+  <h2 class="mt-4">Aluno</h2>
+
+  <p><strong>Nome:</strong> José Paulo Bocelli Júnior, <strong>RA:</strong> SC3003418.</p>
+
+  <h2 class="mt-4">Frontend</h2>
+
+  <p>O frontend está armazenado no GitHub; o <a href="https://github.com/juniorbocelli/ead2_client" target="_blank">
+    código fonte</a>, também.</p>
+
+  <h2 class="mt-4">Backend</h2>
+
+  <p>O backend está armazenado no Heroku e segue as especificações REST, quanto ao nome dos endpoinst. O código fonte está 
+    no <a href="https://github.com/juniorbocelli/ead2_server" target="_blank">GitHub</a>.
+  </p>
+
+  <p>A URL base é: <strong>https://bocelli-app.herokuapp.com/api</strong> e os serviços oferecidos são:</p>
+
+  <h5 class="mt-4">GET: /post/</h5>
+
+  <p>Retorna todos os posts.</p>
+
+  <p><strong>Requer:</strong> Nenhum parâmetro;</p>
+
+
+  <h5 class="mt-4">GET: /post/:id/</h5>
+
+  <p>Retorna o post com o id passado como parâmetro.</p>
+
+  <p><strong>Requer:</strong></p>
+
+  <ul>
+    <li><strong>id</strong> - String contendo o id do post selecionado (<strong>obrigatório</strong>);</li>
+  </ul>
+
+
+  <h5 class="mt-4">POST: /post/</h5>
+
+  <p>Cria um novo post.</p>
+
+  <p><strong>Requer:</strong></p>
+
+  <ul>
+    <li><strong>title</strong> - String contendo o título do post (<strong>obrigatório</strong>);</li>
+    <li><strong>description</strong> - String contendo o conteúdo do post (<strong>obrigatório</strong>);</li>
+    <li><strong>creator</strong> - String contendo o autor do post (<strong>obrigatório</strong>);</li>
+  </ul>
+
+
+  <h5 class="mt-4">PUT: /post/:id/</h5>
+
+  <p>Substitui as informações do post com o id passado como parâmetro.</p>
+
+  <p><strong>Requer:</strong></p>
+
+  <ul>
+    <li><strong>id</strong> - String contendo o id do post selecionado (<strong>obrigatório</strong>);</li>
+    <li><strong>title</strong> - String contendo o título do post (<strong>obrigatório</strong>);</li>
+    <li><strong>description</strong> - String contendo o conteúdo do post (<strong>obrigatório</strong>);</li>
+    <li><strong>creator</strong> - String contendo o autor do post (<strong>obrigatório</strong>);</li>
+  </ul>
+
+
+  <h5 class="mt-4">DELETE: /post/:id/</h5>
+
+  <p>Deleta o post com o id passado como parâmetro.</p>
+
+  <p><strong>Requer:</strong></p>
+
+  <ul>
+    <li><strong>id</strong> - String contendo o id do post a ser deletado (<strong>obrigatório</strong>);</li>
+  </ul>
+</div>

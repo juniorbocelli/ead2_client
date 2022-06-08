@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { ReadmeComponent } from './readme/readme.component';
+
+const routes: Routes = [
+  { path: '', component: ReadmeComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

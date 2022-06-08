@@ -8,11 +8,13 @@ import { PostModule } from './post/post.module';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import {AppHttpInterceptor} from './post/interceptor/intercept.error'
+import {AppHttpInterceptor} from './post/interceptor/intercept.error';
+import { ReadmeComponent } from './readme/readme.component'
 
 @NgModule({
   declarations: [
     AppComponent,
+    ReadmeComponent,
   ],
   imports: [
     BrowserModule,
