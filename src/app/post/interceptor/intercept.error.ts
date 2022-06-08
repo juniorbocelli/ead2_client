@@ -14,7 +14,6 @@ export class AppHttpInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(
 
       tap(evt => {
-        console.log('evt', evt)
         if (evt instanceof HttpResponse) {
           if (evt.body)
             if (evt.body.success)
@@ -24,7 +23,6 @@ export class AppHttpInterceptor implements HttpInterceptor {
         };
       }),
       catchError((err: any) => {
-        console.log('err', err)
         if (err instanceof HttpErrorResponse) {
           try {
             alert(err.message);

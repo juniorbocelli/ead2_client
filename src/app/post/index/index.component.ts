@@ -11,25 +11,17 @@ import { Post } from '../model/model.post';
 export class IndexComponent implements OnInit {
   posts: Post[] = [];
 
-  constructor(public postService: PostService) { }
+  constructor(public postService: PostService) { };
 
   ngOnInit(): void {
     this.postService.getAll().subscribe((data: Post[]) => {
       this.posts = data;
-      console.log(this.posts);
-    })
+    });
   };
 
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
   deletePost(id: string) {
     this.postService.delete(id).subscribe((res: any) => {
       this.posts = this.posts.filter(item => item.id !== id);
-      console.log('Post deleted successfully!');
-    })
-  }
-
-}
+    });
+  };
+};

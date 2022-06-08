@@ -15,40 +15,23 @@ export class CreateComponent implements OnInit {
   constructor(
     public postService: PostService,
     private router: Router
-  ) { }
+  ) { };
 
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
-   ngOnInit(): void {
+  ngOnInit(): void {
     this.form = new FormGroup({
       title: new FormControl('', [Validators.required]),
       description: new FormControl('', Validators.required),
       creator: new FormControl('', Validators.required)
     });
-  }
-    
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
-  get f(){
+  };
+
+  get f() {
     return this.form.controls;
   }
-    
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
-  submit(){
-    console.log(this.form.value);
-    this.postService.create(this.form.value).subscribe((res:any) => {
-         console.log('Post created successfully!');
-         this.router.navigateByUrl('post/index');
-    })
+
+  submit() {
+    this.postService.create(this.form.value).subscribe((res: any) => {
+      this.router.navigateByUrl('post/index');
+    });
   };
 };

@@ -1,12 +1,12 @@
 <div class="container">
-  <h1 class="mb-5">Cadastro de POSTs</h1>
+  <h1 class="mb-5">Lista de POSTs</h1>
 
-  <a href="#" routerLink="/post/create/" class="btn btn-success mb-3">Create New Post</a>
+  <a href="#" routerLink="/post/create/" class="btn btn-success mb-3">Criar novo post</a>
 
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Id</th>
+        <th>ID</th>
         <th>Título</th>
         <th>Descrição</th>
         <th>Autor</th>
@@ -19,7 +19,7 @@
         <td [width]="100">{{ post.id }}</td>
         <td [width]="200">{{ post.title }}</td>
         <td [width]="'40%'">{{ post.description }}</td>
-        <td [width]="100">{{ post.creator }}</td>
+        <td [width]="150">{{ post.creator }}</td>
         <td>
           <div class="d-flex justify-content-between">
             <a href="#" [routerLink]="['/post/', post.id, 'view']" class="btn btn-sm btn-info">Ver</a>

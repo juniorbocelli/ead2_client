@@ -1,7 +1,7 @@
 <div class="container">
-  <h1>Update Post</h1>
+  <h1 class="mb-5">Atualizar Post</h1>
 
-  <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
+  <a href="#" routerLink="/post/index" class="btn btn-primary mb-3">Voltar</a>
 
   <form [formGroup]="form" (ngSubmit)="submit()">
 
@@ -30,6 +30,6 @@
       </div>
     </div>
 
-    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Salvar</button>
+    <button class="btn btn-primary mt-3" type="submit" [disabled]="!form.valid">Salvar</button>
   </form>
 </div>
